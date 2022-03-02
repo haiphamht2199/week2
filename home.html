@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/home.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+ <title>Document</title>
+</head>
+<body>
+ <div class="container">
+  <div class="navigation">
+   <ul>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-magnet" aria-hidden="true"></i></span>
+       <span class="title">Device Maganer</span>
+     </a>
+    </li>
+    <li>
+     <a href="/home.html" onclick="home.html">
+       <span class="icon"><i class="fa fa-dashcube" aria-hidden="true"></i></span>
+       <span class="title">DashBoard</span>
+     </a>
+    </li>
+    <li>
+     <a href="/log.html" onclick="log.html">
+       <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+       <span class="title">Logs</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+       <span class="title">Setting</span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="main">
+   <div class="topbar">
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="user">
+     <span class="user"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+     <span>Wecome Jon</span>
+     <button onclick="SignOut();" class="signout"> Signout</button>
+    </div>
+   </div>
+   <div class="cardBoad">
+    <div class="card">
+     <table>
+      <thead>
+       <tr>
+        <td>Divice</td>
+        <td>MAC Adress</td>
+        <td>IP</td>
+        <td>Create Date</td>
+        <td>Power Consumption</td>
+        <td>Action</td>
+       </tr>
+      </thead>
+      <tbody class="main-device">
+        <!-- <tr>
+        <td>TV</td>
+        <td>00:1B:44:11:3A:b7</td>
+        <td>127.0.02</td>
+        <td>201/05/31</td>
+        <td>50</td>
+        <td>
+          <div class="action">
+          <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+          <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+        </div>
+      </td>
+       </tr>
+       <tr>
+        <td>Washer</td>
+        <td>00:1B:44:11:3A:B8</td>
+        <td>127.0.03</td>
+        <td>201/05/31</td>
+        <td>60</td>
+       </tr>
+       <tr>
+        <td>Refigeator</td>
+        <td>00:1B:44:11:3A:B9</td>
+        <td>127.0.04</td>
+        <td>201/05/31</td>
+        <td>80</td>
+       </tr>
+       <tr>
+        <td>Seling Fan</td>
+        <td>00:1B:44:11:3A:B2</td>
+        <td>127.0.05</td>
+        <td>201/05/31</td>
+        <td>100</td>
+       </tr>
+       <tr class="total">
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>290</td>
+       </tr>  -->
+      </tbody>
+     </table>
+     <div class="total">
+        <h2>Total:</h2>
+        <span class="spanTotal"></span>
+     </div>
+     <div class="actions">
+      <input type="text" placeholder="ip" id="deleteinput">
+      <button onclick="Delete();">Delete</button>
+     </div>
+    </div>
+    <div class="Devices">
+   <div class="chart">
+    <canvas id="myChart">
+    </canvas>
+   </div>
+    <div class="addDevices">
+     <div class="add">
+     <div class="form-control ">
+      <input id="name" type="text" placeholder="name">
+      <small></small>
+      <span></span>
+     </div>
+     <div class="form-control ">
+      <input id="mac" type="text" placeholder="Mac Adress">
+      <small></small>
+      <span></span>
+     </div>
+     <div class="form-control ">
+      <input id="ip" type="text" placeholder="IP">
+      <small></small>
+      <span></span>
+     </div>
+     <div class="form-control ">
+      <input id="date" type="text" placeholder="dd/mm/yy">
+      <small></small>
+      <span></span>
+     </div>
+     <div class="form-control">
+      <input id="number" type="number" placeholder="Power">
+      <small></small>
+      <span></span>
+     </div>
+     <small class="error-toggle"></small>
+     <div class="bnt-button">
+      
+     <button type="submit"class="submit" onclick="addDevice();">ADD DEVICE</button>
+    </div>
+    </div>
+   </div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="./js/dashboard.js"></script>
+<script src="./js/chart.js"></script>
+</body>
+</html>

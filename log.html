@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/home.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+ <title>Document</title>
+</head>
+<body>
+ <div class="container">
+  <div class="navigation">
+   <ul>
+    <li>
+     <a >
+       <span class="icon"><i class="fa fa-magnet" aria-hidden="true"></i></span>
+       <span class="title">Device Maganer</span>
+     </a>
+    </li>
+    <li>
+     <a href="/home.html" onclick="home.html">
+       <span class="icon"><i class="fa fa-dashcube" aria-hidden="true"></i></span>
+       <span class="title">DashBoard</span>
+     </a>
+    </li>
+    <li>
+     <a href="/log.html" onclick="log.html">
+       <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+       <span class="title">Logs</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+       <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+       <span class="title">Setting</span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="main">
+   <div class="topbar">
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="user">
+     <span class="user"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+     <span>Wecome Jon</span>
+    </div>
+   </div>
+   <div class="cardBoad">
+    <div class="card">
+      <div class="cartHeader">
+        <div class="title">
+          <h1>Actions Logs</h1>
+        </div>
+        <div class="search">
+          <input type="text" class="inputSearch" placeholder="name">
+          <button onclick="Search()">Search</button>
+        </div>
+      </div>
+     <table>
+      <thead>
+       <tr>
+        <td>Divice ID #</td>
+        <td>Name</td>
+        <td>Action</td>
+        <td>Date</td>
+       </tr>
+      </thead>
+      <tbody class="log">
+
+      </tbody>
+     </table>
+     <div class="total">
+      <h2>Total:</h2>
+      <span class="spanTotal1"></span>
+   </div>
+    </div>
+    <div class="footer-card">
+        <div class="cicle"onclick="Pagination(1);"><span class="Pagination">1</span></div>
+        <div class="cicle"onclick="Pagination(2);" ><span class="Pagination">2</span></div>
+        <div class="cicle"onclick="Pagination(3);"><span class="Pagination">3</span></div>
+    </div>
+  </div>
+ </div>
+ <script src="./js/log.js">
+
+ </script>
+ <script >
+   function toggleMenu() {
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+        toggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+
+}
+ </script>
+</body>
+</html>
